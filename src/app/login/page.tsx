@@ -48,7 +48,7 @@ function Signin() {
         />
 
         <button className="bg-blue-500 text-white px-4 py-2 block w-full mt-4">
-          Signup
+          Signin
         </button>
       </form>
     </div>
