@@ -5,13 +5,13 @@ async function Navbar() {
   const session = await getServerSession();
 
   return (
-    <nav className="bg-zinc-900 p-4">
+    <nav className="p-4" id="navbar">
       <div className="container mx-auto flex justify-between">
         <Link href="/">
-          <h1 className="font-bold text-xl">NextAuth</h1>
+          <h1 className="font-bold text-xl text-white">NextAuth</h1>
         </Link>
 
-        <ul className="flex gap-x-2">
+        <ul className="flex gap-x-2 text-white">
           {session ? (
             <>
               <li className="px-3 py-1">
@@ -20,7 +20,7 @@ async function Navbar() {
             </>
           ) : (
             <>
-              <li className="px-3 py-1">
+              <li className="px-3 py-1 ">
                 <Link href="/about">About</Link>
               </li>
               <li className="bg-indigo-500 px-3 py-1">
