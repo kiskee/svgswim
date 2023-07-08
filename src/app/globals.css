@@ -8,8 +8,11 @@
     background-size  : cover;
 }
 
+/*
 #navbar{
-    background-image: url('../../public/underwater.jpg');
-    background-repeat : no-repeat;
-    background-size  : cover;
+    background-image: url('../../public/banner.png');
+    background-repeat: repeat-x;
+    
+    background-size: contain;
 }
+*/
