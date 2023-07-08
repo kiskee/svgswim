@@ -5,7 +5,7 @@ import Logo from '../../public/login.png'
 
 async function Navbar () {
   const session = await getServerSession()
-  console.log(session)
+  //console.log(session)
 
   /*
     <nav className="p-4" id="navbar">
@@ -102,27 +102,103 @@ async function Navbar () {
             SVG-SWIM
           </span>
         </a>
-        <div className="flex md:order-2">
-      
-      <Link href="/login" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Signin</Link>
-      </div>
-      <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-    <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  text-black">
-      <li>
-        <a href="/" className="block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0" aria-current="page">Home</a>
-      </li>
-      <li>
-       
-        <Link href="/about" className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0">About</Link>
-      </li>
-      <li>
-        <a href="#" className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0">Services</a>
-      </li>
-      <li>
-        <a href="#" className="block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0">Contact</a>
-      </li>
-    </ul>
-  </div>
+        <div className='flex md:order-2'>
+          <Link
+            href='/login'
+            className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+          >
+            Signin
+          </Link>
+        </div>
+        <div
+          className='items-center justify-between hidden w-full md:flex md:w-auto md:order-1'
+          id='navbar-sticky'
+        >
+          <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  text-black'>
+            {session ? (
+              <>
+                <li>
+                  <a
+                    href='/'
+                    className='block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0'
+                    aria-current='page'
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href='/about'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href='#'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='#'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    Contact
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='/dashboard/profile'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    Profile
+                  </a>
+                </li>
+              </>
+            ) : (
+              <>
+                <li>
+                  <a
+                    href='/'
+                    className='block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0'
+                    aria-current='page'
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <Link
+                    href='/about'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href='#'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    Services
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href='#'
+                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                  >
+                    Contact
+                  </a>
+                </li>
+                
+              </>
+            )}
+          </ul>
+        </div>
       </div>
     </nav>
   )
