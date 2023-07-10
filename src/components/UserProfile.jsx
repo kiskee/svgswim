@@ -1,10 +1,10 @@
-"use client";
-import { signOut } from "next-auth/react";
+'use client'
+import { signOut } from 'next-auth/react'
 import Image from 'next/image'
 import Profile from '../../public/profile.jpg'
 import Link from 'next/link'
 
-async function UserProfile ({ session }) {
+function UserProfile ({ session }) {
   return (
     <>
       <ul className='menu'>
@@ -32,7 +32,7 @@ async function UserProfile ({ session }) {
             </li>
             <li>
               <button
-               className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0 text-red-600'
+                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0 text-red-600'
                 onClick={() => {
                   signOut()
                 }}
