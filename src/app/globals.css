@@ -2,10 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-#signin{
-    background-image: url('../../public/under.jpg');
-    background-repeat : no-repeat;
-    background-size  : cover;
+#signin {
+  background-image: url("../../public/under.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*
@@ -16,3 +16,31 @@
     background-size: contain;
 }
 */
+
+.menu {
+    display: block;
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+  }
+  
+ 
+  
+  .menu ul {
+    
+    height: 0;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    transition: all .5s ease;
+    top: 35px;
+    width: 100%;
+  }
+  
+  .menu li:hover ul {
+    height: 200px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  
