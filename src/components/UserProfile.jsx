@@ -1,10 +1,14 @@
 'use client'
-import { signOut } from 'next-auth/react'
+import { signOut, useSession } from 'next-auth/react'
 import Image from 'next/image'
 import Profile from '../../public/profile.jpg'
 import Link from 'next/link'
 
 function UserProfile ({ session }) {
+
+  const data = useSession()
+
+
   return (
     <>
       <ul className='menu'>
@@ -19,7 +23,7 @@ function UserProfile ({ session }) {
             </li>
             <li className=''>
               <span className='block text-sm  text-gray-500 truncate dark:text-gray-400'>
-                name@flowbite.com
+                {data.data.user.fullname}
               </span>
             </li>
             <li className='pt-1'>

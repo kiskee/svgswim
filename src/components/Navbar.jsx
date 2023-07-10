@@ -120,39 +120,39 @@ async function Navbar () {
           id='navbar-sticky'
         >
           <ul className='flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0  text-black'>
-          <li>
-                  <a
-                    href='/'
-                    className='block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0'
-                    aria-current='page'
-                  >
-                    Home
-                  </a>
-                </li>
-                <li>
-                  <Link
-                    href='/about'
-                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <a
-                    href='#'
-                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
-                  >
-                    Services
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href='#'
-                    className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
-                  >
-                    Contact
-                  </a>
-                </li>
+            <li>
+              <a
+                href='/'
+                className='block py-2 pl-3 pr-4 bg-blue-700 rounded md:bg-transparent md:p-0'
+                aria-current='page'
+              >
+                Home
+              </a>
+            </li>
+            <li>
+              <Link
+                href='/about'
+                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <a
+                href='#'
+                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href='#'
+                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+              >
+                Contact
+              </a>
+            </li>
           </ul>
         </div>
       </div>
