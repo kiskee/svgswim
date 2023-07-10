@@ -92,7 +92,7 @@ async function Navbar () {
   return (
     <nav className='border-b border-gray-200 p-4'>
       <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>
-        <a href='#' className='flex items-center'>
+        <Link href='/' className='flex items-center'>
           <Image
             src={Logo}
             width={100}
@@ -102,14 +102,14 @@ async function Navbar () {
           <span className='self-center text-2xl font-semibold whitespace-nowrap'>
             SVG-SWIM
           </span>
-        </a>
+        </Link>
         <div className='flex md:order-2'>
           {session ? (
             <UserProfile session={session} />
           ) : (
             <Link
               href='/login'
-              className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
+              className='text-white bg-blue-700 hover:bg-sky-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'
             >
               Signin
             </Link>
@@ -138,20 +138,20 @@ async function Navbar () {
               </Link>
             </li>
             <li>
-              <a
-                href='#'
+            <Link
+                href='/blog'
                 className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
               >
-                Services
-              </a>
+                Blog
+              </Link>
             </li>
             <li>
-              <a
-                href='#'
+            <Link
+                href='/contact'
                 className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
               >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
