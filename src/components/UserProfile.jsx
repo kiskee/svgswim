@@ -23,7 +23,7 @@ function UserProfile ({ session }) {
             </li>
             <li className=''>
               <span className='block text-sm  text-gray-500 truncate dark:text-gray-400'>
-                {data.data.user.fullname}
+                {data?.data?.user?.fullname}
               </span>
             </li>
             <li className='pt-1'>
