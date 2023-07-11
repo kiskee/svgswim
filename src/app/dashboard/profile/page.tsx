@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 function ProfilePage() {
   const { data: session, status } = useSession();
 
-  /*
+  
   
   
       <pre className="bg-zinc-800 p-4">
@@ -19,7 +19,7 @@ function ProfilePage() {
         )}
       </pre>
   
-  */ 
+  
 
   return (
     <div className="h-[calc(100vh-4rem)] flex flex-col gap-y-10 items-center justify-center">
