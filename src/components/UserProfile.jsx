@@ -15,21 +15,21 @@ function UserProfile ({ session }) {
         <li>
           <Image src={Profile} className='w-10 h-10 rounded-full' />
 
-          <ul>
+          <ul className='border'>
             <li className='pt-3'>
-              <span className='block text-sm text-gray-900'>
+              <span className='block text-sm text-gray-900 text-center'>
                 {session.user.email}
               </span>
             </li>
-            <li className=''>
-              <span className='block text-sm  text-gray-500 truncate dark:text-gray-400'>
+            <li className=' pb-2 text-center'>
+              <span className='block text-sm  text-sky-500 truncate '>
                 {data?.data?.user?.fullname}
               </span>
             </li>
             <li className='pt-1'>
               <Link
                 href='/dashboard/profile'
-                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0'
+                className='block py-2 pl-3 pr-4 rounded hover:bg-gray-100  md:p-0 '
               >
                 Profile
               </Link>
