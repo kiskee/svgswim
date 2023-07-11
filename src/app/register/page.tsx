@@ -18,7 +18,7 @@ function Signup() {
         password: formData.get("password"),
         fullname: formData.get("fullname"),
       });
-      console.log(signupResponse);
+      
       const res = await signIn("credentials", {
         email: signupResponse.data.email,
         password: formData.get("password"),
