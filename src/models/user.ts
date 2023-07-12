@@ -20,7 +20,7 @@ const UserSchema = new Schema(
       type: String,
       required: [true, "fullname is required"],
       minLength: [3, "fullname must be at least 3 characters"],
-      maxLength: [20, "fullname must be at most 20 characters"],
+      maxLength: [30, "fullname must be at most 30 characters"],
     },
   },
   {
