@@ -1,16 +1,18 @@
 "use client";
-import Link from 'next/link'
-import { useRouter, redirect  } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { useRouter  } from "next/navigation";
+import {  useState } from "react";
 import axios, { AxiosError } from "axios";
 
 export function BlogModal ({ show, onClose }) {
+  const [error, setError] = useState();
+  const router = useRouter();
+  
+  
   if (!show) {
     return null
   }
 
-  const [error, setError] = useState();
-  const router = useRouter();
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
