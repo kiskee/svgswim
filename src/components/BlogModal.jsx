@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-import { useRouter } from "next/navigation";
+import { useRouter, redirect  } from "next/navigation";
 import { FormEvent, useState } from "react";
 import axios, { AxiosError } from "axios";
 
@@ -24,16 +24,17 @@ export function BlogModal ({ show, onClose }) {
       text: formData.text.value
 
     });
-    if (resp?.ok) return router.push("/blog");
+    if (resp?.ok) return router.reload(window.location.pathname);
 
     } catch (error) {
-      console.log(error);
+      //console.log(error);
       if (error instanceof AxiosError) {
         const errorMessage = error.response?.data.message;
         setError(errorMessage);
       }
     }
   }
+  
 
   /*
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -59,6 +60,24 @@ export function BlogModal ({ show, onClose }) {
   };
   */
  // onClick={onClose}
+
+/*
+ const handleSubmit = async (event) => {
+  event.preventDefault();
+  const formData = event.target
+  axios
+  .post('/api/posts', {
+    title: formData.title.value,
+      image: formData.image.value,
+      category: formData.category.value,
+      text: formData.text.value
+  })
+  .then(response => {
+    console.log(response);
+  });
+ }
+ */
+
   return (
     <div className='modal z-40' onClick={onClose}>
       <div
@@ -66,6 +85,7 @@ export function BlogModal ({ show, onClose }) {
         className='p-4 bg-white w-2/5  border-4 border-sky-600 flex place-content-center '
       >
         <form  onSubmit={handleSubmit}>
+        {error && <div className="bg-red-500 text-white p-2 mb-2">{error}</div>}
           <h1 className='text-center text-5xl mb-4 border-b pb-4 '>
             Register a New Post
           </h1>
